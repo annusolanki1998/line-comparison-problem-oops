@@ -2,7 +2,7 @@ package com.bridgelabz;
 
 import java.util.Scanner;
 public class CalculateLength {
-    public static void calculateLengthUC2() {
+    public static void calculateLengthUC3() {
 
         System.out.println("Calculate length between two points");
         Scanner scanner = new Scanner(System.in);
@@ -30,14 +30,17 @@ public class CalculateLength {
         System.out.println("Length of second line is : " +length1);
 
         if (length == length1) {
-            System.out.println("Both lines are equal");
-        } else {
-            System.out.println("Both lines are not equal");
+            System.out.println("Both lines are equal !");
+        } else if(length > length1) {
+            System.out.println("Line first are greater second line !");
+        }
+        else{
+            System.out.println("Line first are less than second line !");
         }
 
     }
     public static void main(String[] args) {
-        calculateLengthUC2();
+        calculateLengthUC3();
 
     }
 }
