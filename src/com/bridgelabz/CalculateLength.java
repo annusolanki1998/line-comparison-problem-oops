@@ -1,8 +1,9 @@
 package com.bridgelabz;
 
 import java.util.Scanner;
+
 public class CalculateLength {
-    public static void calculateLengthUC3() {
+    public void compareLines() {
 
         System.out.println("Calculate length between two points");
         Scanner scanner = new Scanner(System.in);
@@ -15,7 +16,7 @@ public class CalculateLength {
         System.out.println("Enter y2 : ");
         int y2 = scanner.nextInt();
         int length = (int) Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
-        System.out.println("Length of first line is : " +length);
+        System.out.println("Length of first line is : " + length);
 
         System.out.println("Calculate length between another two points");
         System.out.println("Enter x3 : ");
@@ -27,20 +28,23 @@ public class CalculateLength {
         System.out.println("Enter z4 : ");
         int z4 = scanner.nextInt();
         int length1 = (int) Math.sqrt(Math.pow(x4 - x3, 2) + Math.pow(z4 - z3, 2));
-        System.out.println("Length of second line is : " +length1);
+        System.out.println("Length of second line is : " + length1);
+
 
         if (length == length1) {
             System.out.println("Both lines are equal !");
-        } else if(length > length1) {
+        } else if (length > length1) {
             System.out.println("Line first are greater second line !");
-        }
-        else{
+        } else {
             System.out.println("Line first are less than second line !");
         }
 
     }
+
     public static void main(String[] args) {
-        calculateLengthUC3();
+        CalculateLength calculatelength = new CalculateLength();
+
+        calculatelength.compareLines();
 
     }
 }
